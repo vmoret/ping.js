@@ -1,6 +1,7 @@
 export const apiBase = 'http://webapps.barco.com/cs/ping/api/v1';
 // export const apiBase = 'http://webapps.bgstst04.barco.com/cs/ping/api/v1';
-const uploadUrl = 'http://webapps.bgstst04.barco.com/cs/ping/web/newFile.asp';
+export const uploadUrl = 'http://webapps.barco.com/cs/ping/web/newFile.asp';
+// export const uploadUrl = 'http://webapps.bgstst04.barco.com/cs/ping/web/newFile.asp';
 export const imageDir = 'images/icons';
 export const fileTypes = {
   bat: 'Windows Batch file',
