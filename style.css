@@ -1,0 +1,160 @@
+/**********************************
+* COMMON                          *
+**********************************/
+.error::before {
+	content: 'Error: ';
+	font-weight: bold;
+}
+.error {
+	background: #ffeeee;
+	border: .1em solid indianred;
+	color: indianred;
+	padding: .5em;
+	margin: .5em 0 .5em 0;
+}
+
+/**********************************
+* PING-EXPLORER                   *
+**********************************/
+.ping-explorer {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: small;
+}
+.ping-explorer .container {
+	display: flex;
+}
+.ping-explorer > div:last-child {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.ping-explorer aside {
+	min-width: 18em;
+	min-height: 15em;
+	padding: 0 .5em 0 0;
+	margin: 0 .5em 0 0;
+	border-right: .1em solid silver;
+}
+.ping-explorer ul {
+	padding: 0 0 0 1.5em;
+}
+.ping-explorer li {
+	list-style-image: none;
+	cursor: pointer;
+}
+.ping-explorer li.selected {
+	font-weight: bold;
+}
+.ping-explorer table {
+	cursor: pointer;
+	flex: 1;
+	min-width: 50em;
+}
+.ping-explorer table tbody tr td:first-child {
+	width: 1.5em;
+}
+.ping-explorer table tbody tr td:nth-child(2) {
+	min-width: 20em;
+}
+.ping-explorer table tbody tr td:nth-child(3) {
+	min-width: 20em;
+}
+.ping-explorer table tbody tr td:nth-child(4) {
+	min-width: 5em;
+}
+.ping-explorer table tbody tr td:nth-child(5) {
+	min-width: 5em;
+}
+.ping-explorer .unc-path::before {
+	content: 'PATH: ';
+	font-weight: bold;
+}
+.ping-explorer .unc-path {
+	background: #eeeeee;
+	border: .1em solid gray;
+	color: gray;
+	padding: .5em;
+	font-size: x-small;
+	margin: .5em 0 .5em 0;
+}
+.ping-explorer .unc-path > a {
+	color: gray;
+}
+
+/**********************************
+ * PING-UPLOAD          *
+ **********************************/
+.ping-upload {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: small;
+}
+.ping-upload .container .row {
+  display: flex;
+  margin: .5em 0 0 0;
+}
+.ping-upload .container .row label {
+  width: 12em;
+}
+.ping-upload .container .row button {
+  margin: 0 0 0 12em;
+}
+.ping-upload .unc-path::before {
+	content: 'TARGET PATH: ';
+	font-weight: bold;
+}
+.ping-upload .unc-path {
+	background: #eeeeee;
+	border: .1em solid gray;
+	color: gray;
+	padding: .5em;
+	font-size: x-small;
+	margin: .5em 0 .5em 0;
+}
+.ping-upload .unc-path > a {
+	color: gray;
+}
+
+
+/** ping-loading
+  ---------------------------------------------------------*/
+ping-loading {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 24px auto;
+}
+/** Circle
+  ---------------------------------------------------------*/
+ping-loading .circle {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation-name: ping-loading-animation;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0,.64,.46,.46);
+  animation-duration: 2000ms;
+  background:
+    red;
+}
+ping-loading .circle-2 {
+  animation-delay: 395ms;
+}
+/** ping-loading animation
+  ---------------------------------------------------------*/
+@keyframes ping-loading-animation {
+  0% {
+    transform: scale(0);
+    opacity: 0.9;
+  }
+  40% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}

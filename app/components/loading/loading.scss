@@ -1,0 +1,43 @@
+/** ping-loading
+  ---------------------------------------------------------*/
+ping-loading {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 24px auto;
+}
+/** Circle
+  ---------------------------------------------------------*/
+ping-loading .circle {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation-name: ping-loading-animation;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0,.64,.46,.46);
+  animation-duration: 2000ms;
+  background:
+    red;
+}
+ping-loading .circle-2 {
+  animation-delay: 395ms;
+}
+/** ping-loading animation
+  ---------------------------------------------------------*/
+@keyframes ping-loading-animation {
+  0% {
+    transform: scale(0);
+    opacity: 0.9;
+  }
+  40% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
